@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Timer from "./components/Timer";
 
 function App() {
+  const firstTimer = {
+    id: 1,
+    time: 10000,
+    autostart: true,
+    step: 2000,
+  };
+  const secondTimer={
+    id:2,
+    time:35000,
+    autostart:false,
+    step:1000
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <Timer
+      time={firstTimer.time}
+      autostart={firstTimer.autostart}
+      step={firstTimer.step}
+      key={firstTimer.id}
+    />
+    <Timer
+      time={secondTimer.time}
+      autostart={secondTimer.autostart}
+      step={secondTimer.step}
+      key={secondTimer.id}
+    />
     </div>
   );
 }

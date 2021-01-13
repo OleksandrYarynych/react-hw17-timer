@@ -1,0 +1,24 @@
+body{
+  padding:0 50px;
+}
+
+.timer{
+  font-size: 50px;
+}
+
+.btn{
+  padding: 15px 20px;
+  background-color: blue;
+  color: #ffffff;
+  border-radius: 15px;
+  border: 3px solid blue ;
+  transition-duration: .6s;
+  margin-right: 15px;
+  outline: none;
+}
+
+.btn:hover{
+  background-color: #ffffff;
+  color: #000000;
+  transition-duration: .6s;
+}
