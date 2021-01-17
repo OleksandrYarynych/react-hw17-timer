@@ -21,13 +21,11 @@ function App() {
       time={firstTimer.time}
       autostart={firstTimer.autostart}
       step={firstTimer.step}
-      key={firstTimer.id}
     />
     <Timer
       time={secondTimer.time}
       autostart={secondTimer.autostart}
       step={secondTimer.step}
-      key={secondTimer.id}
     />
     </div>
   );

@@ -18,7 +18,7 @@ if(isTimerGoing){
     }
   },step);
 
-  if(timeLeft===0){
+  if(!timeLeft){
     alert("Час вийшов")
   }
   return ()=>clearTimeout(changeTimer)
@@ -30,7 +30,7 @@ if(isTimerGoing){
     <div>
       <p className="timer">{timeLeft}</p>
       <button className="btn" onClick={()=>{
-        if(timeLeft>0){
+        if(timeLeft){
           setIsTimerGoing(true)
           setTimeout(()=>setTimeLeft(timeLeft-timeStep),step);
         }
